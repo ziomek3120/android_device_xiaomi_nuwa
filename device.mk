@@ -55,7 +55,8 @@ PRODUCT_PACKAGES += \
     ApertureOverlayNuwa \
     FrameworkResOverlayNuwa \
     SettingsOverlayNuwa \
-    SystemUIOverlayNuwa
+    SystemUIOverlayNuwa \
+    WifiResNuwa
 
 # Sensors
 PRODUCT_PACKAGES += \
