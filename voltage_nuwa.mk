@@ -11,17 +11,34 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from nuwa device
 $(call inherit-product, device/xiaomi/nuwa/device.mk)
 
-# Inherit from common lineage configuration
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit from common VoltageOS configuration
+$(call inherit-product, vendor/voltage/config/common_full_phone.mk)
+
+# Voltage Flags
+TARGET_BOOT_ANIMATION_RES := 1440
+TARGET_FACE_UNLOCK_SUPPORTED := true
+VOLTAGE_BUILD_TYPE := UNOFFICIAL
+EXTRA_UDFPS_ANIMATIONS := true
+
+# Boost Framework - SM8550 Configuration
+VOLTAGE_CPU_SMALL_CORES := 0,1,2
+VOLTAGE_CPU_BIG_CORES := 3,4,5,6,7
+VOLTAGE_CPU_SYS_BG := 0-2
+VOLTAGE_CPU_BG := 0-2
+VOLTAGE_CPU_FG := 0-7
+VOLTAGE_CPU_LIMIT_BG := 0-1
+VOLTAGE_CPU_UNLIMIT_UI := 0-7
+VOLTAGE_CPU_LIMIT_UI := 0-6
+VOLTAGE_CPU_DISPLAY := 6-7
 
 # UDFPS
 TARGET_HAS_UDFPS := true
 
-PRODUCT_NAME := lineage_nuwa
+PRODUCT_NAME := voltage_nuwa
 PRODUCT_DEVICE := nuwa
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := 2210132C
+PRODUCT_MODEL := 2210132G
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
