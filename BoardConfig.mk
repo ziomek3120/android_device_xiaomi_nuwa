@@ -37,6 +37,7 @@ TARGET_SCREEN_DENSITY := 560
 TARGET_OTA_ASSERT_DEVICE := nuwa
 
 # Properties
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/properties/system.prop
 TARGET_ODM_PROP += $(DEVICE_PATH)/properties/odm.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/properties/vendor.prop
 

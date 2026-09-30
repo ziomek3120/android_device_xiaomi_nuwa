@@ -13,6 +13,10 @@ $(call inherit-product, vendor/xiaomi/nuwa/nuwa-vendor.mk)
 # Camera
 $(call inherit-product-if-exists, device/xiaomi/nuwa-miuicamera/device.mk)
 
+# Media profiles
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/config/media_profiles_nuwa.xml:$(TARGET_COPY_OUT_ODM)/etc/media_profiles_nuwa.xml
+
 # BCR
 $(call inherit-product-if-exists, vendor/bcr/bcr.mk)
 
